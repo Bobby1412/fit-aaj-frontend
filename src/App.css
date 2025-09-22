@@ -1,0 +1,65 @@
+/* 🌙 WHOOP-style Dark Theme */
+
+:root {
+  --bg-color: #0d0d0d;
+  --card-color: #1a1a1a;
+  --accent-color: #1db954;
+  --text-color: #ffffff;
+  --muted-text: #aaaaaa;
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Global button style */
+button {
+  background: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+button:hover {
+  background: #17a74b;
+  transform: translateY(-2px);
+}
+
+/* Global input style */
+input {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: var(--border-radius);
+  background: #111;
+  color: var(--text-color);
+  outline: none;
+  margin: 5px 0;
+  width: 100%;
+}
+
+input:focus {
+  border-color: var(--accent-color);
+}
+
+/* Global card style */
+.card {
+  background: var(--card-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,46 @@
+@import "./styles/globals.css";
+@import "./styles/home.css";
+@import "./styles/forms.css";
+@import "./styles/dashboard.css";
+
+/* Custom global styles (optional) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;  /* White background */
+  color: #111; /* Dark text for contrast */
+}
+/* Remove unwanted scrollbars */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ No horizontal scroll */
+  background-color: #0d0d0d; /* Match dark theme */
+  color: #fff;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}

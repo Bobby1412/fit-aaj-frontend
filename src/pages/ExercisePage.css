@@ -1,0 +1,112 @@
+.exercise-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.exercise-page h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00e68a; /* WHOOP green */
+}
+
+/* Back button */
+.exercise-page a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #00e68a;
+  text-decoration: none;
+  font-weight: bold;
+}
+.exercise-page a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.exercise-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.exercise-form button {
+  background: #00e68a;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.exercise-form button:hover {
+  background: #00cc77;
+}
+
+/* Exercise list */
+.exercise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.exercise-list li {
+  background: #262626;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+}
+/* Exercise summary */
+.exercise-summary {
+  margin-top: 15px;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #00e68a;
+}
+
+/* Exercise list items hover + delete */
+.exercise-list li {
+  background: #262626;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.exercise-list li:hover {
+  transform: translateY(-2px);
+  border: 1px solid #00e68a;
+}
+
+/* Delete button */
+.exercise-list button {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.exercise-list button:hover {
+  color: #ff1a1a;
+}

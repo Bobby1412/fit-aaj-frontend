@@ -1,0 +1,78 @@
+.diet-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.diet-page h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #ffcc00; /* Yellow highlight */
+}
+
+/* Back link */
+.diet-page a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+.diet-page a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.diet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.diet-form input,
+.diet-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.diet-form button {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.diet-form button:hover {
+  background: #e6b800;
+}
+
+/* Food list */
+.diet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.diet-list li {
+  background: #262626;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.total-calories {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ffcc00;
+}

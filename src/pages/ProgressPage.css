@@ -1,0 +1,29 @@
+.progress-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.progress-form {
+  margin: 20px 0;
+}
+
+.progress-form input {
+  margin: 5px;
+  padding: 8px;
+}
+
+.progress-form button {
+  padding: 8px 12px;
+  margin-left: 5px;
+}
+
+.progress-list {
+  list-style: none;
+  padding: 0;
+}
+
+.progress-list li {
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  padding: 8px;
+}

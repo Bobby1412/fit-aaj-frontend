@@ -1,0 +1,58 @@
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+/* Features Section */
+.features-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.features-title {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 30px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: #555;
+  font-size: 0.95rem;
+}
