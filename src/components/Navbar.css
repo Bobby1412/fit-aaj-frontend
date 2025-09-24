@@ -23,6 +23,40 @@
   align-items: center;
 }
 
+.navbar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #2a2a2a;
+}
+
+.navbar-user {
+  margin-right: 12px;
+  color: #cfd8dc;
+  font-size: 0.95rem;
+}
+
+.navbar-logout {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar-logout:hover {
+  background: #c62828;
+}
+
 .navbar-links a {
   color: white;
   text-decoration: none;

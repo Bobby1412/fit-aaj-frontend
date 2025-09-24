@@ -72,7 +72,6 @@ const Dashboard = () => {
       {/* Buttons */}
       <div style={{ marginBottom: "20px" }}>
         <button onClick={() => setShowEditModal(true)} className="edit-btn">New Today Entry</button>
-        <button onClick={handleLogout} className="logout-btn">Logout</button>
       </div>
 
       {/* Simple create entry modal */}

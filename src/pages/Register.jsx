@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css"; // same css we used for login
+import AlertDialog from "../components/AlertDialog";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,11 +24,12 @@ const Register = () => {
       .then(async (res) => {
         const data = await res.json().catch(() => ({}));
         if (res.ok) {
-          setMessage(data.message || "signup successful");
+          setMessage(data.message || "Signup successful! Please login.");
           if (data.userId) {
             localStorage.setItem("fitUser", JSON.stringify({ id: data.userId, name: data.name, email }));
+            try { window.dispatchEvent(new Event("storage")); } catch (_) {}
           }
-          setTimeout(() => navigate("/dashboard"), 700);
+          setDialogOpen(true);
         } else {
           setMessage(data.message || "Signup failed");
         }
@@ -48,6 +51,15 @@ const Register = () => {
       <p className="auth-footer">
         Already have an account? <Link to="/login">Login</Link>
       </p>
+      <AlertDialog
+        open={dialogOpen}
+        title="localhost:9090 says"
+        message={message || "Signup successful! Please login."}
+        onClose={() => {
+          setDialogOpen(false);
+          navigate("/login");
+        }}
+      />
     </div>
   );
 };

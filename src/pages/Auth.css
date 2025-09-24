@@ -7,6 +7,7 @@
   background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
+  flex-direction: column;
 }
 
 /* Card */
@@ -19,6 +20,15 @@
   max-width: 400px;
   text-align: center;
   animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title above the dialog */
+.auth-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00e6e6;
+  text-align: center;
 }
 
 .auth-form h2 {

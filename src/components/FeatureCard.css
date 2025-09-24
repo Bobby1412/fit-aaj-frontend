@@ -1,31 +1,37 @@
 .feature-card {
-  background: #1e1e1e; /* dark card */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  background: #141414; /* match dark background */
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid #171717; /* very subtle border */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 280px;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  max-width: 300px;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0, 255, 200, 0.4); /* neon glow */
+  transform: translateY(-4px);
+  background: #1c1c1c; /* slightly lighter on hover */
+  border-color: #1f1f1f;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 12px;
+  color: #d7d7d7; /* muted icon color */
 }
 
 .feature-title {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   margin-bottom: 8px;
-  color: #00e5ff; /* neon blue */
+  color: #e0e0e0; /* light grey, not bright white */
 }
 
 .feature-description {
-  font-size: 1rem;
-  color: #ccc; /* light gray for readability */
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #a8b3b3; /* softer text */
 }
