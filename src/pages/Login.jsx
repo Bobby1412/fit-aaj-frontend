@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     setMessage("");
     setLoading(true);
-    fetch("http://localhost:8081/api/auth/login", {
+    fetch("http://localhost:9090/fitaaj-backend/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })

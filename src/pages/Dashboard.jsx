@@ -19,7 +19,7 @@ const Dashboard = () => {
     if (savedUser) {
       const user = JSON.parse(savedUser);
       setUserData(user);
-      fetch(`http://localhost:8081/api/dashboard/${user.id}`)
+      fetch(`http://localhost:9090/fitaaj-backend/api/dashboard/${user.id}`)
         .then((r) => (r.ok ? r.json() : []))
         .then((data) => setEntries(Array.isArray(data) ? data : []))
         .catch(() => setEntries([]));
@@ -39,12 +39,12 @@ const Dashboard = () => {
     const today = new Date().toISOString().slice(0, 10);
     const payload = { userId: user.id, date: today, steps: 0, waterMl: 0, exerciseMinutes: 0, caloriesIntake: 0 };
     setStatus("Saving...");
-    fetch("http://localhost:8081/api/dashboard", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+    fetch("http://localhost:9090/fitaaj-backend/api/dashboard", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
       .then((r) => r.json().catch(() => ({})))
       .then(() => {
         setStatus("Saved");
         setShowEditModal(false);
-        fetch(`http://localhost:8081/api/dashboard/${user.id}`)
+        fetch(`http://localhost:9090/fitaaj-backend/api/dashboard/${user.id}`)
           .then((r) => (r.ok ? r.json() : []))
           .then((data) => setEntries(Array.isArray(data) ? data : []))
           .catch(() => {});

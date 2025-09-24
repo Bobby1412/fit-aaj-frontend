@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
     setMessage("");
     setLoading(true);
-    fetch("http://localhost:8081/api/auth/register", {
+    fetch("http://localhost:9090/fitaaj-backend/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password })
