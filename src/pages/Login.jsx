@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css"; // common css for login/register
 import AlertDialog from "../components/AlertDialog";
+import { apiUrl } from "../config";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,10 +16,11 @@ const Login = () => {
     e.preventDefault();
     setMessage("");
     setLoading(true);
-    fetch("http://localhost:9090/fitaaj-backend/api/auth/login", {
+    const payload = { email: email.trim(), password: password.trim() };
+    fetch(apiUrl("/api/auth/login"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify(payload)
     })
       .then(async (res) => {
         const data = await res.json().catch(() => ({}));

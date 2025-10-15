@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css"; // same css we used for login
 import AlertDialog from "../components/AlertDialog";
+import { apiUrl } from "../config";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Register = () => {
     e.preventDefault();
     setMessage("");
     setLoading(true);
-    fetch("http://localhost:9090/fitaaj-backend/api/auth/register", {
+    fetch(apiUrl("/api/auth/register"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password })
